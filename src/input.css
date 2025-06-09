@@ -1,0 +1,318 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+body {
+  @apply bg-gradient-to-br from-azul-gris via-azul-gris to-azul-gris/80 min-h-screen text-white font-sans;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-poppins;
+}
+
+/* Dark mode styles */
+.dark body {
+  @apply bg-gradient-to-br from-black via-azul-gris/20 to-black;
+}
+
+.dark .glass-card {
+  @apply bg-black/30 border-white/10;
+}
+
+.dark .navbar {
+  @apply bg-black/30 border-white/10;
+}
+
+.dark .nav-link {
+  @apply text-white/80 hover:text-white;
+}
+
+.dark .btn-animado.primary {
+  @apply bg-white text-black hover:bg-white/90;
+}
+
+.dark .btn-animado.secondary {
+  @apply bg-white/10 text-white hover:bg-white/20;
+}
+
+.dark .skill-card {
+  @apply bg-black/30 border-white/10;
+}
+
+.dark .project-card {
+  @apply bg-black/30 border-white/10;
+}
+
+.dark .contact-card {
+  @apply bg-black/30 border-white/10;
+}
+
+.dark .filter-btn {
+  @apply bg-white/10 text-white hover:bg-white/20;
+}
+
+.dark .filter-btn.active {
+  @apply bg-white text-black;
+}
+
+/* Component styles */
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 transition-all duration-300;
+}
+
+.nav-link {
+  @apply text-white/80 hover:text-white transition-colors relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-0 h-0.5 bg-white transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+.section {
+  @apply py-20;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-extrabold text-center mb-12;
+}
+
+.glass-card {
+  @apply bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-8 shadow-xl transition-all duration-300;
+}
+
+.btn-animado {
+  @apply inline-flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+}
+
+.btn-animado.primary {
+  @apply bg-rosa-pastel text-white hover:bg-rosa-pastel/90;
+}
+
+.btn-animado.secondary {
+  @apply bg-white/10 text-white hover:bg-white/20;
+}
+
+.skill-card {
+  @apply glass-card text-center p-6 transition-all duration-300 hover:transform hover:scale-105;
+}
+
+.skill-icon {
+  @apply text-4xl text-rosa-pastel mb-4;
+}
+
+.project-card {
+  @apply glass-card cursor-pointer transition-all duration-300 hover:transform hover:scale-105;
+}
+
+.project-img {
+  @apply w-full h-48 object-cover rounded-xl mb-4;
+}
+
+.contact-card {
+  @apply glass-card text-center p-6 transition-all duration-300 hover:transform hover:scale-105;
+}
+
+.contact-icon {
+  @apply text-3xl text-rosa-pastel mb-4;
+}
+
+.back-button {
+  @apply fixed bottom-8 right-8 bg-rosa-pastel text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:transform hover:scale-110 md:hidden;
+}
+
+/* Timeline styles */
+.timeline-container {
+  @apply space-y-12;
+}
+
+.timeline-section {
+  @apply relative;
+}
+
+.timeline-title {
+  @apply text-2xl font-bold mb-8 text-center;
+}
+
+.timeline {
+  @apply relative pl-8;
+}
+
+.timeline::before {
+  content: '';
+  @apply absolute left-0 top-0 bottom-0 w-0.5 bg-white/20;
+}
+
+.timeline-item {
+  @apply relative mb-8 last:mb-0;
+}
+
+.timeline-dot {
+  @apply absolute left-[-1.5rem] top-2 w-3 h-3 rounded-full bg-rosa-pastel;
+}
+
+.timeline-content {
+  @apply glass-card p-4;
+}
+
+/* Flip card styles */
+.flip-card {
+  @apply perspective-1000 w-full h-64;
+}
+
+.flip-card-inner {
+  @apply relative w-full h-full transition-transform duration-500 transform-style-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  @apply rotate-y-180;
+}
+
+.flip-card-front,
+.flip-card-back {
+  @apply absolute w-full h-full backface-hidden rounded-xl p-6;
+}
+
+.flip-card-front {
+  @apply glass-card flex flex-col items-center justify-center;
+}
+
+.flip-card-back {
+  @apply glass-card rotate-y-180 flex flex-col items-center justify-center;
+}
+
+/* Filter buttons */
+.filter-btn {
+  @apply px-4 py-2 rounded-full bg-white/10 text-white transition-all duration-300 hover:bg-white/20;
+}
+
+.filter-btn.active {
+  @apply bg-rosa-pastel text-white;
+}
+
+/* Utility classes */
+.font-poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+.font-sans {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Custom utilities for 3D transforms */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Language selector */
+.language-selector {
+  @apply flex items-center gap-2;
+}
+
+.language-btn {
+  @apply px-2 py-1 rounded text-sm font-semibold transition-all duration-300;
+}
+
+.language-btn.active {
+  @apply bg-rosa-pastel text-white;
+}
+
+.dark .language-btn {
+  @apply text-white/80 hover:text-white;
+}
+
+.dark .language-btn.active {
+  @apply bg-white text-black;
+}
+
+/* Timeline responsive */
+@media (max-width: 768px) {
+  .timeline-container {
+    @apply px-4;
+  }
+
+  .timeline-section {
+    @apply mb-8;
+  }
+
+  .timeline-section:last-child {
+    @apply mb-0;
+  }
+
+  .timeline-title {
+    @apply cursor-pointer flex items-center justify-between;
+  }
+
+  .timeline-title::after {
+    content: '\f107';
+    font-family: 'Font Awesome 5 Free';
+    @apply text-rosa-pastel transition-transform duration-300;
+  }
+
+  .timeline-section.collapsed .timeline-title::after {
+    @apply rotate-180;
+  }
+
+  .timeline-section.collapsed .timeline {
+    @apply hidden;
+  }
+}
+
+/* Mejoras en el blur y transiciones */
+.glass-card {
+  @apply bg-white/10 backdrop-blur-xl rounded-2xl border border-white/20 p-8 shadow-xl transition-all duration-300;
+}
+
+.dark .glass-card {
+  @apply bg-black/30 backdrop-blur-xl;
+}
+
+.navbar {
+  @apply fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 transition-all duration-300;
+}
+
+.dark .navbar {
+  @apply bg-black/30 backdrop-blur-xl;
+}
+
+/* Mejoras en las animaciones */
+.btn-animado {
+  @apply inline-flex items-center px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+}
+
+.flip-card-inner {
+  @apply relative w-full h-full transition-transform duration-500 transform-style-3d;
+}
+
+/* Mejoras en la accesibilidad */
+.language-btn:focus,
+.filter-btn:focus,
+#theme-toggle:focus {
+  @apply outline-none ring-2 ring-rosa-pastel ring-offset-2 ring-offset-transparent;
+}
+
+/* Mejoras en el contraste */
+.dark .text-white\/80 {
+  @apply text-white/90;
+}
+
+.dark .text-white\/60 {
+  @apply text-white/70;
+}

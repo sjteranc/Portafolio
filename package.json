@@ -1,0 +1,17 @@
+{
+  "name": "portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio personal de Jhoseline Terán",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./public/style.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./public/style.css --minify"
+  },
+  "keywords": ["portfolio", "ui/ux", "design"],
+  "author": "Jhoseline Terán",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1"
+  }
+}

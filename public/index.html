@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Susan Jhoseline Terán Cruz | Portafolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- AOS.js CDN -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Tu CSS compilado -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <div class="flex items-center gap-2">
+        <img src="../assets/logo.jpeg" alt="Logo Jhoseline Terán" class="w-10 h-10 rounded-full bg-rosa-pastel object-cover shadow-lg border border-white/60">
+        <span class="font-extrabold text-lg tracking-tight font-poppins">Jhoseline Terán</span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-base font-semibold">
+        <a href="#home" class="nav-link">Inicio</a>
+        <a href="#about" class="nav-link">Sobre mí</a>
+        <a href="#timeline" class="nav-link">Experiencia</a>
+        <a href="#skills" class="nav-link">Habilidades</a>
+        <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#volunteer" class="nav-link">Voluntariados</a>
+        <a href="#contact" class="nav-link">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <!-- Selector de idioma -->
+        <div class="language-selector">
+          <button class="language-btn active" data-lang="es">ES</button>
+          <span class="text-white/60">|</span>
+          <button class="language-btn" data-lang="en">EN</button>
+        </div>
+        <!-- Botón modo oscuro -->
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Cambiar tema">
+          <i class="fas fa-moon text-xl"></i>
+        </button>
+        <a href="mailto:teran.susanjhoseline@gmail.com" 
+           class="btn-animado primary hidden md:inline-block"
+           aria-label="Contactar por Email">
+          ¡Hablemos!
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Home -->
+  <section id="home" class="section">
+    <div class="container mx-auto px-4 pt-32">
+      <div class="glass-card max-w-4xl mx-auto text-center" data-aos="fade-up">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6">Jhoseline Terán</h1>
+        <p class="text-xl mb-4">Diseñadora UX/UI & Programadora Frontend</p>
+        <p class="text-lg mb-8 italic">"No es imposible, solo difícil"</p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#projects" class="btn-animado primary">
+            <i class="fas fa-eye mr-2"></i>Ver proyectos
+          </a>
+          <a href="#contact" class="btn-animado secondary">
+            <i class="fas fa-paper-plane mr-2"></i>Contactar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title" data-aos="fade-up">Sobre mí</h2>
+      <div class="glass-card max-w-4xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+        <p class="text-lg mb-6">
+          Soy diseñadora y programadora apasionada por la tecnología, con sólidos conocimientos en programación y habilidades en metodologías ágiles como SCRUM y Design Thinking. Mi enfoque en UX/UI se centra en crear experiencias intuitivas y accesibles, utilizando herramientas como Figma, Adobe XD y metodologías de investigación de usuarios. Destaco por mi meticulosidad, trabajo en equipo, alegría y proactividad, buscando constantemente mejorar mis habilidades y listo para nuevos desafíos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section id="timeline" class="section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title" data-aos="fade-up">Experiencia y Educación</h2>
+      <div class="timeline-container max-w-6xl mx-auto" data-aos="fade-up">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Educación -->
+          <div class="timeline-section">
+            <h3 class="timeline-title">Educación</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Ingeniería de Sistemas</h4>
+                  <p class="text-sm">UMRPSXCH (2020-)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Ingeniería de Diseño y Animación Digital</h4>
+                  <p class="text-sm">UMRPSXCH (2022-)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Técnico Superior Contaduría General</h4>
+                  <p class="text-sm">ITSEC-SUCRE (2021-2023)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Técnico Medio Electrónica</h4>
+                  <p class="text-sm">Colegio (2014-2016)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Manejo del Lenguaje Inglés B2</h4>
+                  <p class="text-sm">UMRPSXCH - Extensión Universitaria (2016-2019)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experiencia Laboral -->
+          <div class="timeline-section">
+            <h3 class="timeline-title">Experiencia Laboral</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Diseñadora UX/UI</h4>
+                  <p class="text-sm">Fundación Napp (2024)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Programadora</h4>
+                  <p class="text-sm">10mind (2024)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Contadora</h4>
+                  <p class="text-sm">CONTAGEN (2021-)</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4 class="font-semibold">Diseñadora</h4>
+                  <p class="text-sm">Facultad de Ciencias Agrarias (2023)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title" data-aos="fade-up">Habilidades</h2>
+      
+      <!-- Habilidades Técnicas -->
+      <div class="mb-12" data-aos="fade-up">
+        <h3 class="text-2xl font-bold mb-6 text-center">Habilidades Técnicas</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="skill-card">
+            <i class="fas fa-paint-brush skill-icon"></i>
+            <h4 class="font-bold mb-2">Diseño (Avanzado)</h4>
+            <p>Adobe Illustrator, Adobe Photoshop, Figma, Blender</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-server skill-icon"></i>
+            <h4 class="font-bold mb-2">Backend (Básico)</h4>
+            <p>Asp.net, Nest js, Postman, Spring Boot</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-code skill-icon"></i>
+            <h4 class="font-bold mb-2">Frontend (Avanzado-Intermedio)</h4>
+            <p>React, Next.js, Tailwindcss</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-laptop-code skill-icon"></i>
+            <h4 class="font-bold mb-2">Lenguajes</h4>
+            <p>JS, C#, US, Node.js, Javascript, Python, CSS, HTML</p>
+          </div>
+          <div class="skill-card">
+            <i class="fas fa-tools skill-icon"></i>
+            <h4 class="font-bold mb-2">Herramientas</h4>
+            <p>Trello, Git, Github, Gitlab, Visual Studio Code, IntelliJ IDEA, Github Actions</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Habilidades Blandas -->
+      <div data-aos="fade-up">
+        <h3 class="text-2xl font-bold mb-6 text-center">Habilidades Blandas</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="fas fa-comments skill-icon"></i>
+                <h4 class="font-bold mb-2">Comunicación efectiva</h4>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="font-bold mb-2">Comunicación efectiva</h4>
+                <p>Capacidad para transmitir ideas claramente y escuchar activamente, facilitando la colaboración en equipos multidisciplinarios.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="fas fa-random skill-icon"></i>
+                <h4 class="font-bold mb-2">Adaptabilidad</h4>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="font-bold mb-2">Adaptabilidad</h4>
+                <p>Flexibilidad para ajustarme a nuevos entornos y tecnologías, manteniendo un alto rendimiento en situaciones cambiantes.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="fas fa-users skill-icon"></i>
+                <h4 class="font-bold mb-2">Trabajo en equipo</h4>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="font-bold mb-2">Trabajo en equipo</h4>
+                <p>Habilidad para colaborar efectivamente, compartir conocimientos y contribuir al éxito colectivo del equipo.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="fas fa-tasks skill-icon"></i>
+                <h4 class="font-bold mb-2">Organización</h4>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="font-bold mb-2">Organización</h4>
+                <p>Capacidad para gestionar múltiples tareas y proyectos, manteniendo un orden eficiente y cumpliendo con los plazos establecidos.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="fas fa-heart skill-icon"></i>
+                <h4 class="font-bold mb-2">Empatía</h4>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="font-bold mb-2">Empatía</h4>
+                <p>Capacidad para entender y considerar las necesidades de los usuarios, creando soluciones centradas en las personas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <i class="fas fa-lightbulb skill-icon"></i>
+                <h4 class="font-bold mb-2">Creatividad</h4>
+              </div>
+              <div class="flip-card-back">
+                <h4 class="font-bold mb-2">Creatividad</h4>
+                <p>Habilidad para generar ideas innovadoras y encontrar soluciones únicas a los desafíos de diseño y desarrollo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title" data-aos="fade-up">Proyectos</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Biogenetics Lab -->
+        <div class="project-card" data-category="web" onclick="showProjectDetails('biogenetics-lab')" data-aos="fade-up">
+          <img src="../assets/anaki.png" alt="Sitio web para Laboratorio de Biogenética" class="project-img">
+          <h3 class="font-bold text-xl mb-2">Sitio web para Laboratorio de Biogenética</h3>
+          <p class="mb-2">Diseño web enfocado en accesibilidad y experiencia de usuario para un laboratorio de biogenética.</p>
+          <span class="text-sm text-azul-gris">Figma, HTML, CSS, JavaScript, Frontend, Accesibilidad</span>
+        </div>
+        <!-- Geargori Web -->
+        <div class="project-card" data-category="web" onclick="showProjectDetails('geargori-web')" data-aos="fade-up">
+          <img src="../assets/geargoriweb.png" alt="Sitio Web de App Robótica Geargori" class="project-img">
+          <h3 class="font-bold text-xl mb-2">Sitio Web de App Robótica Geargori</h3>
+          <p class="mb-2">Diseño y desarrollo del sitio web para la aplicación de robótica Geargori.</p>
+          <span class="text-sm text-azul-gris">Figma, HTML, CSS, JavaScript, Frontend</span>
+        </div>
+        <!-- Napp Foundation -->
+        <div class="project-card" data-category="web" onclick="showProjectDetails('napp-mobile')" data-aos="fade-up">
+          <img src="../assets/fundacionnapp.png" alt="Sitio Web Fundación Napp" class="project-img">
+          <h3 class="font-bold text-xl mb-2">Sitio Web Fundación Napp</h3>
+          <p class="mb-2">Diseño y desarrollo del sitio web para Fundación Napp.</p>
+          <span class="text-sm text-azul-gris">Figma, HTML, CSS, JavaScript, Frontend</span>
+        </div>
+      </div>
+      <div class="text-center mt-8">
+        <a href="proyectos.html" class="btn-animado primary">
+          Ver todos los proyectos
+          <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Voluntariados -->
+  <section id="volunteer" class="section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title" data-aos="fade-up">Voluntariados</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card" data-aos="fade-up">
+          <i class="fas fa-google text-4xl text-rosa-pastel mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Embajadora de Google Women Techmakers</h3>
+          <p class="text-sm">Google Groups (2023-)</p>
+        </div>
+        <div class="glass-card" data-aos="fade-up" data-aos-delay="50">
+          <i class="fas fa-users-cog text-4xl text-rosa-pastel mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Presidenta</h3>
+          <p class="text-sm">Sociedad Científica de Tecnologías de la Información y Comunicación (2023-)</p>
+        </div>
+        <div class="glass-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-user-tie text-4xl text-rosa-pastel mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Vicepresidenta</h3>
+          <p class="text-sm">Asociación de Sociedades Científicas de la UMRPSXCH (2023-)</p>
+        </div>
+        <div class="glass-card" data-aos="fade-up" data-aos-delay="150">
+          <i class="fas fa-globe text-4xl text-rosa-pastel mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Organización First Global Bolivia</h3>
+          <p class="text-sm">AGETIC, 10minds, Fundación Napp (2022, 2023, 2025)</p>
+        </div>
+        <div class="glass-card" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-award text-4xl text-rosa-pastel mb-4"></i>
+          <h3 class="font-bold text-xl mb-2">Becada del programa Mujercitas</h3>
+          <p class="text-sm">Programa de desarrollo profesional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container mx-auto px-4">
+      <h2 class="section-title" data-aos="fade-up">Contacto</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <a href="mailto:teran.susanjhoseline@gmail.com" class="contact-card" data-aos="fade-up" data-aos-delay="50">
+          <i class="fas fa-envelope contact-icon"></i>
+          <h3 class="font-bold mb-2">Email</h3>
+          <p>teran.susanjhoseline@gmail.com</p>
+        </a>
+        <a href="https://www.facebook.com/jhoselin.teran/" target="_blank" rel="noopener" class="contact-card" data-aos="fade-up" data-aos-delay="100">
+          <i class="fab fa-facebook contact-icon"></i>
+          <h3 class="font-bold mb-2">Facebook</h3>
+          <p>@jhoselin.teran</p>
+        </a>
+        <a href="https://www.instagram.com/jhose_jk/" target="_blank" rel="noopener" class="contact-card" data-aos="fade-up" data-aos-delay="150">
+          <i class="fab fa-instagram contact-icon"></i>
+          <h3 class="font-bold mb-2">Instagram</h3>
+          <p>@jhose_jk</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center">
+    <p class="text-sm">&copy; 2024 Susan Jhoseline Terán Cruz. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Modal de Proyecto (Pop-up) -->
+  <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm hidden">
+    <div class="classic-modal">
+      <button id="close-modal" class="absolute right-4 top-4 text-gray-500 hover:text-rosa-pastel dark:text-gray-400 dark:hover:text-rosa-pastel transition-colors text-lg p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-rosa-pastel z-20" aria-label="Cerrar modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="popup-img">
+        <img id="carousel-single-image" src="" alt="" />
+      </div>
+      <div class="popup-controls">
+        <div class="dots" id="carousel-dots"></div>
+        <div class="flex gap-4 justify-center w-full">
+          <button id="prev-image" class="bg-rosa-pastel/80 hover:bg-rosa-pastel text-white shadow p-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-rosa-pastel text-base" aria-label="Imagen anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button id="next-image" class="bg-rosa-pastel/80 hover:bg-rosa-pastel text-white shadow p-2 rounded-full transition-colors focus:outline-none focus:ring-2 focus:ring-rosa-pastel text-base" aria-label="Imagen siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <div class="popup-info">
+        <h3 id="modal-title"></h3>
+        <h4>Descripción</h4>
+        <p id="modal-description"></p>
+        <h4>Tecnologías</h4>
+        <div class="techs" id="modal-technologies"></div>
+        <div class="links" id="modal-links"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón de regresar en móvil -->
+  <a href="#" class="back-button" aria-label="Volver arriba">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    // Inicializar AOS
+    AOS.init({
+      duration: 900,
+      once: true,
+      easing: 'ease-in-out'
+    });
+
+    // Modo oscuro
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    const icon = themeToggle.querySelector('i');
+
+    // Verificar preferencia guardada
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+      icon.classList.replace('fa-moon', 'fa-sun');
+    }
+
+    themeToggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      if (html.classList.contains('dark')) {
+        localStorage.theme = 'dark';
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        localStorage.theme = 'light';
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+    });
+
+    // Selector de idioma
+    const languageButtons = document.querySelectorAll('.language-btn');
+    const currentLang = localStorage.getItem('language') || 'es';
+
+    // Establecer idioma inicial
+    document.documentElement.lang = currentLang;
+    languageButtons.forEach(btn => {
+      if (btn.dataset.lang === currentLang) {
+        btn.classList.add('active');
+      }
+    });
+
+    languageButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.documentElement.lang = lang;
+        localStorage.setItem('language', lang);
+        
+        // Actualizar botones
+        languageButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Aquí iría la lógica para cambiar los textos
+        // Por ahora solo actualizamos el idioma del documento
+      });
+    });
+
+    // Filtrado de proyectos
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remover clase active de todos los botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Añadir clase active al botón clickeado
+        button.classList.add('active');
+
+        const filter = button.dataset.filter;
+
+        projectCards.forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Lógica del visor de proyectos (pop-up)
+    function showProjectDetails(projectId) {
+      const modal = document.getElementById('project-modal');
+      const title = document.getElementById('modal-title');
+      const description = document.getElementById('modal-description');
+      const technologies = document.getElementById('modal-technologies');
+      const links = document.getElementById('modal-links');
+      const carouselImage = document.getElementById('carousel-single-image');
+      const carouselDots = document.getElementById('carousel-dots');
+
+      // Obtener el proyecto actual
+      const lang = document.documentElement.lang;
+      const project = projects[lang].find(p => p.id === projectId);
+
+      // Actualizar contenido básico
+      title.textContent = project.title;
+      description.textContent = project.details;
+      
+      // Limpiar y actualizar tecnologías
+      technologies.innerHTML = '';
+      project.technologies.forEach(tech => {
+        const badge = document.createElement('span');
+        badge.className = 'px-3 py-1 bg-rosa-pastel/10 text-rosa-pastel rounded-full text-xs font-medium';
+        badge.textContent = tech;
+        technologies.appendChild(badge);
+      });
+
+      // Limpiar y actualizar enlaces
+      links.innerHTML = '';
+      if (project.links.demo) {
+        const demoLink = document.createElement('a');
+        demoLink.href = project.links.demo;
+        demoLink.target = '_blank';
+        demoLink.className = 'btn-animado primary text-xs px-4 py-2';
+        demoLink.innerHTML = '<i class="fas fa-external-link-alt mr-2"></i>Ver Demo';
+        links.appendChild(demoLink);
+      }
+      if (project.links.code) {
+        const codeLink = document.createElement('a');
+        codeLink.href = project.links.code;
+        codeLink.target = '_blank';
+        codeLink.className = 'btn-animado secondary text-xs px-4 py-2';
+        codeLink.innerHTML = '<i class="fab fa-github mr-2"></i>Ver Código';
+        links.appendChild(codeLink);
+      }
+
+      // Carrusel: solo una imagen visible
+      let currentImageIndex = 0;
+      function updateCarousel() {
+        carouselImage.src = project.images[currentImageIndex];
+        carouselImage.alt = `${project.title} - Imagen ${currentImageIndex + 1}`;
+        // Actualizar puntos
+        carouselDots.innerHTML = '';
+        project.images.forEach((img, idx) => {
+          const dot = document.createElement('button');
+          dot.className = `w-2 h-2 rounded-full transition-colors ${idx === currentImageIndex ? 'bg-rosa-pastel' : 'bg-white/50'}`;
+          dot.setAttribute('aria-label', `Imagen ${idx + 1}`);
+          dot.onclick = () => {
+            currentImageIndex = idx;
+            updateCarousel();
+          };
+          carouselDots.appendChild(dot);
+        });
+      }
+
+      document.getElementById('prev-image').onclick = () => {
+        currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+        updateCarousel();
+      };
+      document.getElementById('next-image').onclick = () => {
+        currentImageIndex = (currentImageIndex + 1) % project.images.length;
+        updateCarousel();
+      };
+
+      // Inicializar carrusel
+      updateCarousel();
+
+      // Mostrar modal
+      modal.classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    // Cerrar modal
+    const closeModal = () => {
+      document.getElementById('project-modal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    };
+
+    document.getElementById('close-modal').addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+
+    document.getElementById('project-modal').addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) closeModal();
+    });
+
+    // Cargar proyectos destacados
+    function loadFeaturedProjects() {
+      const grid = document.querySelector('#projects .grid');
+      const lang = document.documentElement.lang;
+      const featuredProjects = projects[lang].filter(project => project.featured);
+      
+      grid.innerHTML = featuredProjects.map(project => `
+        <div class="project-card" data-category="${project.category}" onclick="showProjectDetails('${project.id}')" data-aos="fade-up">
+          <img src="${project.image}" alt="${project.title}" class="project-img">
+          <h3 class="font-bold text-xl mb-2">${project.title}</h3>
+          <p class="mb-2">${project.description}</p>
+          <span class="text-sm text-azul-gris">${project.technologies.join(', ')}</span>
+        </div>
+      `).join('');
+    }
+
+    // Cargar contenido inicial
+    loadFeaturedProjects();
+  </script>
+</body>
+</html>

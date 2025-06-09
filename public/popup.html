@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visor de Proyecto | Pop-up</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Tu CSS compilado -->
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900">
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <div class="flex items-center gap-2">
+        <img src="../assets/logo.jpeg" alt="Logo Jhoseline Terán" class="w-10 h-10 rounded-full bg-rosa-pastel object-cover shadow-lg border border-white/60">
+        <span class="font-extrabold text-lg tracking-tight font-poppins">Jhoseline Terán</span>
+      </div>
+      <nav class="hidden md:flex gap-8 text-base font-semibold">
+        <a href="index.html#home" class="nav-link">Inicio</a>
+        <a href="index.html#about" class="nav-link">Sobre mí</a>
+        <a href="index.html#timeline" class="nav-link">Experiencia</a>
+        <a href="index.html#skills" class="nav-link">Habilidades</a>
+        <a href="index.html#projects" class="nav-link">Proyectos</a>
+        <a href="index.html#volunteer" class="nav-link">Voluntariados</a>
+        <a href="index.html#contact" class="nav-link">Contacto</a>
+      </nav>
+      <div class="flex items-center gap-4">
+        <!-- Selector de idioma -->
+        <div class="language-selector">
+          <button class="language-btn active" data-lang="es">ES</button>
+          <span class="text-white/60">|</span>
+          <button class="language-btn" data-lang="en">EN</button>
+        </div>
+        <!-- Botón modo oscuro -->
+        <button id="theme-toggle" class="p-2 rounded-full hover:bg-white/10 transition-colors" aria-label="Cambiar tema">
+          <i class="fas fa-moon text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content section for project details -->
+  <section class="py-12 px-4">
+    <div class="container mx-auto max-w-4xl glass-card flex flex-col md:flex-row gap-6 p-6 md:p-8 relative">
+      <!-- Botón de regresar -->
+      <a href="proyectos.html" class="absolute top-4 left-4 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white text-3xl transition-colors" aria-label="Volver a proyectos">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+
+      <!-- Columna imagen -->
+      <div class="modal-image-col mt-10 md:mt-0 relative"> 
+        <div id="image-carousel" class="modal-image-container relative">
+          <img id="carousel-single-image" class="w-full h-full object-contain" src="" alt="" />
+          <!-- Controles de Carrusel -->
+          <div class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4">
+            <button id="prev-image" class="p-2 rounded-full bg-gray-600/80 hover:bg-gray-700 text-white shadow transition-transform hover:scale-105" aria-label="Imagen anterior">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="next-image" class="p-2 rounded-full bg-gray-600/80 hover:bg-gray-700 text-white shadow transition-transform hover:scale-105" aria-label="Imagen siguiente">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <!-- Puntos del Carrusel (Removidos para simplificar diseño) -->
+        <!-- <div id="carousel-dots" class="flex gap-2 justify-center mt-4"></div> -->
+      </div>
+      <!-- Info -->
+      <div class="modal-info-col">
+        <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+        <h4 class="font-semibold mt-4 mb-1">Descripción</h4>
+        <p id="modal-description" class="text-base leading-relaxed text-gray-800 dark:text-gray-200 whitespace-pre-line"></p>
+        <h4 class="font-semibold mt-4 mb-1">Tecnologías</h4>
+        <div id="modal-technologies" class="flex flex-wrap gap-2"></div>
+        <div id="modal-links" class="mt-4 space-x-2 flex justify-center"></div> <!-- Centering buttons -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="js/projects.js"></script>
+  <script src="js/translations.js"></script> <!-- Ensure translations.js is included for language selector in header -->
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
+
+    if (projectId) {
+      const lang = document.documentElement.lang || 'es';
+      const project = projects[lang].find(p => p.id === projectId);
+
+      if (project) {
+        const title = document.getElementById('modal-title');
+        const description = document.getElementById('modal-description');
+        const technologies = document.getElementById('modal-technologies');
+        const links = document.getElementById('modal-links');
+        const carouselImage = document.getElementById('carousel-single-image');
+        const carouselDots = document.getElementById('carousel-dots'); // Keep reference for now, but not used visually
+
+        // Actualizar contenido básico
+        title.textContent = project.title;
+        description.textContent = project.details;
+
+        // Tecnologías
+        technologies.innerHTML = '';
+        project.technologies.forEach(tech => {
+          const badge = document.createElement('span');
+          badge.className = 'px-3 py-1 bg-rosa-pastel/10 text-rosa-pastel rounded-full text-xs font-medium';
+          badge.textContent = tech;
+          technologies.appendChild(badge);
+        });
+
+        // Enlaces
+        links.innerHTML = '';
+        if (project.links.demo) {
+          const demoLink = document.createElement('a');
+          demoLink.href = project.links.demo;
+          demoLink.target = '_blank';
+          demoLink.className = 'btn-animado primary text-xs px-4 py-2';
+          demoLink.innerHTML = '<i class="fas fa-external-link-alt mr-2"></i>Ver Demo';
+          links.appendChild(demoLink);
+        }
+        if (project.links.code) {
+          const codeLink = document.createElement('a');
+          codeLink.href = project.links.code;
+          codeLink.target = '_blank';
+          codeLink.className = 'btn-animado secondary text-xs px-4 py-2';
+          codeLink.innerHTML = '<i class="fab fa-github mr-2"></i>Ver Código';
+          links.appendChild(codeLink);
+        }
+
+        // Carrusel: solo una imagen visible (Puntos no usados en UI)
+        let currentImageIndex = 0;
+        function updateCarousel() {
+          carouselImage.src = project.images[currentImageIndex];
+          carouselImage.alt = `${project.title} - Imagen ${currentImageIndex + 1}`;
+          // No actualizar puntos visualmente
+          // carouselDots.innerHTML = '';
+          // project.images.forEach((img, idx) => {
+          //   const dot = document.createElement('button');
+          //   dot.className = `w-2 h-2 rounded-full transition-colors ${idx === currentImageIndex ? 'bg-rosa-pastel' : 'bg-gray-300 dark:bg-gray-600'}`;
+          //   dot.setAttribute('aria-label', `Imagen ${idx + 1}`);
+          //   dot.onclick = () => {
+          //     currentImageIndex = idx;
+          //     updateCarousel();
+          //   };
+          //   carouselDots.appendChild(dot);
+          // });
+        }
+        document.getElementById('prev-image').onclick = () => {
+          currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
+          updateCarousel();
+        };
+        document.getElementById('next-image').onclick = () => {
+          currentImageIndex = (currentImageIndex + 1) % project.images.length;
+          updateCarousel();
+        };
+        updateCarousel();
+      } else {
+        // Si no se encuentra el proyecto, redirigir o mostrar mensaje de error
+        window.location.href = 'proyectos.html';
+      }
+    } else {
+      // Si no hay ID en la URL, redirigir a la página de proyectos
+      window.location.href = 'proyectos.html';
+    }
+
+    // Modo oscuro (copiado de index/proyectos para consistencia)
+    const themeToggle = document.getElementById('theme-toggle');
+    const html = document.documentElement;
+    if (themeToggle) {
+      const icon = themeToggle.querySelector('i');
+
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        html.classList.add('dark');
+        icon.classList.replace('fa-moon', 'fa-sun');
+      } else {
+        html.classList.remove('dark');
+        icon.classList.replace('fa-sun', 'fa-moon');
+      }
+
+      themeToggle.addEventListener('click', () => {
+        html.classList.toggle('dark');
+        if (html.classList.contains('dark')) {
+          localStorage.theme = 'dark';
+          icon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+          localStorage.theme = 'light';
+          icon.classList.replace('fa-sun', 'fa-moon');
+        }
+      });
+    }
+
+    // Selector de idioma (copiado de proyectos para consistencia)
+    const languageButtons = document.querySelectorAll('.language-btn');
+    const currentLang = localStorage.getItem('language') || 'es';
+
+    // Establecer idioma inicial
+    document.documentElement.lang = currentLang;
+    languageButtons.forEach(btn => {
+      if (btn.dataset.lang === currentLang) {
+        btn.classList.add('active');
+      }
+    });
+
+    languageButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.dataset.lang;
+        document.documentElement.lang = lang;
+        localStorage.setItem('language', lang);
+        
+        // No hay función `updateContent` aquí, ya que el contenido es específico del proyecto.
+        // Si en el futuro se quiere traducir el resto del header, se necesitará implementar.
+      });
+    });
+
+    // Navbar Scroll (copiado de proyectos para consistencia)
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add('navbar-scrolled');
+        } else {
+          navbar.classList.remove('navbar-scrolled');
+        }
+      });
+    }
+  </script>
+</body>
+</html> 
