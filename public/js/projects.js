@@ -159,25 +159,7 @@ const projects = {
         code: null
       }
     },
-    {
-      id: 'napp-web',
-      title: 'Sitio Web Fundación Napp',
-      description: 'Diseño y desarrollo del sitio web institucional para Fundación Napp.',
-      category: 'web',
-      image: '../assets/fundacionnapp.png',
-      images: [
-        '../assets/fundacionnapp.png',
-        '../assets/fundacionnapp2.png',
-        '../assets/fundacionnapp3.png'
-      ],
-      technologies: ['Figma', 'HTML', 'CSS', 'JavaScript', 'Accesibilidad'],
-      details: `Desarrollo del sitio web institucional para Fundación Napp, siguiendo la metodología Design Thinking:\n\n1. Investigación: Análisis de necesidades y entrevistas con el equipo de la fundación.\n2. Definición: Establecimiento de objetivos y estructura del sitio.\n3. Ideación: Desarrollo de soluciones para presentar la información de manera clara y accesible.\n4. Prototipado: Creación de wireframes y prototipos interactivos.\n5. Implementación: Desarrollo frontend con enfoque en accesibilidad.\n\nCaracterísticas principales:\n- Diseño responsive y accesible\n- Sección de proyectos y programas\n- Galería de imágenes\n- Formulario de contacto\n- Integración con redes sociales\n- Optimización para SEO`,
-      links: {
-        demo: 'https://fundacionnapp.org',
-        code: null
-      },
-      featured: true
-    },
+    
   ],
   en: [
     {
@@ -339,24 +321,6 @@ const projects = {
         code: null
       }
     },
-    {
-      id: 'napp-web',
-      title: 'Napp Foundation Website',
-      description: 'Design and development of the institutional website for Napp Foundation.',
-      category: 'web',
-      image: '../assets/fundacionnapp.png',
-      images: [
-        '../assets/fundacionnapp.png',
-        '../assets/fundacionnapp2.png',
-        '../assets/fundacionnapp3.png'
-      ],
-      technologies: ['Figma', 'HTML', 'CSS', 'JavaScript', 'Accessibility'],
-      details: `Development of the institutional website for Napp Foundation, following the Design Thinking methodology:\n\n1. Research: Needs analysis and interviews with the foundation team.\n2. Definition: Setting objectives and site structure.\n3. Ideation: Development of solutions to present information clearly and accessibly.\n4. Prototyping: Creation of wireframes and interactive prototypes.\n5. Implementation: Frontend development with accessibility focus.\n\nMain features:\n- Responsive and accessible design\n- Projects and programs section\n- Image gallery\n- Contact form\n- Social media integration\n- SEO optimization`,
-      links: {
-        demo: 'https://fundacionnapp.org',
-        code: null
-      },
-      featured: true
-    },
+    
   ]
 }; 
