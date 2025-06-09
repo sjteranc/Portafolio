@@ -1,6 +1,25 @@
 const projects = {
   es: [
     {
+      id: 'anaki-ux',
+      title: 'Diseño UX/UI - Añaki',
+      description: 'Diseño de experiencia de usuario y prototipo interactivo para Añaki.',
+      category: 'ux',
+      image: 'assets/anaki.png',
+      images: [
+        'assets/anaki.png',
+        'assets/anaki2.png',
+        'assets/añaki3.png'
+      ],
+      technologies: ['Figma', 'UX/UI', 'Prototipado', 'Design Thinking'],
+      details: `Diseño de experiencia de usuario y prototipo interactivo para Añaki, siguiendo la metodología Design Thinking:\n\n1. Empatía: Realicé entrevistas con usuarios y stakeholders para entender sus necesidades y desafíos.\n2. Definición: Identifiqué los principales problemas y oportunidades de mejora.\n3. Ideación: Desarrollé múltiples soluciones para mejorar la experiencia de usuario.\n4. Prototipado: Creé wireframes y un prototipo interactivo en Figma.\n5. Testing: Realicé pruebas de usabilidad con usuarios reales.\n\nCaracterísticas principales:\n- Prototipo interactivo completo\n- Diseño centrado en el usuario\n- Flujos de navegación optimizados\n- Interacciones intuitivas\n- Diseño visual moderno y atractivo`,
+      links: {
+        demo: 'https://www.figma.com/proto/JJSuL8SoM1UasR15yMOdk9/A%C3%B1aki---Dise%C3%B1o-UX-UI--Team-?node-id=2194-10385&starting-point-node-id=2194%3A10385&embed-host=share',
+        code: null
+      },
+      featured: true
+    },
+    {
       id: 'biogenetics-lab',
       title: 'Sitio web para Laboratorio de Biogenética',
       description: 'Diseño web enfocado en accesibilidad y experiencia de usuario para un laboratorio de biogenética.',
@@ -64,13 +83,13 @@ const projects = {
       images: [
         'assets/fundacionnapp.png',
         'assets/fundacionnapp2.png',
-        'assets/fundacionnapp3.png'
       ],
-      technologies: ['Figma', 'HTML', 'CSS', 'JavaScript'],
-      details: `Desarrollo del sitio web institucional para Fundación Napp, siguiendo la metodología Design Thinking y enfocado en diseño responsive:\n\n1. Empatía: Realicé entrevistas con el equipo de la fundación y usuarios potenciales para entender sus necesidades y desafíos.\n2. Definición: Identifiqué los principales problemas y objetivos del sitio web, incluyendo la necesidad de mostrar el impacto social y facilitar donaciones.\n3. Ideación: Desarrollé múltiples soluciones para mejorar la navegación y la presentación de información, con enfoque en la accesibilidad y diseño responsive.\n4. Prototipado: Creé wireframes y prototipos interactivos en Figma, probando diferentes layouts y flujos de usuario, con especial atención a la experiencia móvil.\n5. Testing: Realicé pruebas de usabilidad con usuarios reales para validar la experiencia en diferentes dispositivos.\n\nCaracterísticas principales:\n- Diseño responsive optimizado para todos los dispositivos\n- Preparado para futura conversión a aplicación móvil\n- Sección de proyectos y programas\n- Galería de imágenes\n- Formulario de contacto\n- Integración con redes sociales\n- Blog de noticias y actualizaciones\n- Sección de donaciones\n- Testimonios de beneficiarios`,
+      technologies: ['Figma', 'HTML', 'CSS', 'JavaScript', 'UX Research'],
+      details: `Desarrollo del sitio web institucional para Fundación Napp, siguiendo la metodología Design Thinking y enfocado en diseño responsive:\n\n1. Empatía: Realicé entrevistas con el equipo de la fundación y usuarios potenciales para entender sus necesidades y desafíos.\n2. Definición: Identifiqué los principales problemas y objetivos del sitio web, incluyendo la necesidad de mostrar el impacto social y facilitar donaciones.\n3. Ideación: Desarrollé múltiples soluciones para mejorar la navegación y la presentación de información, con enfoque en la accesibilidad y diseño responsive.\n4. Prototipado: Creé wireframes y prototipos interactivos en Figma, probando diferentes layouts y flujos de usuario, con especial atención a la experiencia móvil.\n5. Testing: Realicé pruebas de usabilidad con usuarios reales para validar la experiencia en diferentes dispositivos.\n\nCaracterísticas principales:\n- Diseño responsive optimizado para todos los dispositivos\n- Preparado para futura conversión a aplicación móvil\n- Sección de proyectos y programas\n- Galería de imágenes\n- Formulario de contacto\n- Integración con redes sociales\n- Blog de noticias y actualizaciones\n- Sección de donaciones\n- Testimonios de beneficiarios\n\nEl proceso completo de investigación y diseño está documentado en el reporte UX adjunto.`,
       links: {
         demo: 'https://fundacion-napp.org/',
-        code: null
+        code: null,
+        report: 'assets/Fundación NAPP.pdf'
       },
       featured: true
     },
@@ -83,7 +102,6 @@ const projects = {
       images: [
         'assets/fundacionnapp.png',
         'assets/fundacionnapp2.png',
-        'assets/fundacionnapp3.png'
       ],
       technologies: ['Figma', 'HTML', 'CSS', 'JavaScript'],
       details: `Desarrollo del sitio web institucional para Fundación Napp, siguiendo la metodología Design Thinking:\n\n1. Investigación: Análisis de necesidades y entrevistas con el equipo de la fundación.\n2. Definición: Establecimiento de objetivos y estructura del sitio.\n3. Ideación: Diseño de la arquitectura de información y experiencia de usuario.\n4. Prototipado: Creación de wireframes y prototipos interactivos.\n5. Implementación: Desarrollo frontend con enfoque en accesibilidad.\n\nCaracterísticas principales:\n- Diseño responsive y accesible\n- Sección de proyectos y programas\n- Galería de imágenes\n- Formulario de contacto\n- Integración con redes sociales\n- Blog de noticias y actualizaciones`,
@@ -168,7 +186,6 @@ const projects = {
       image: 'assets/criminal.png',
       images: [
         'assets/criminal.png',
-        'assets/criminal1.png',
         'assets/criminal2.png',
         'assets/criminal3.png'
       ],
@@ -182,6 +199,25 @@ const projects = {
     
   ],
   en: [
+    {
+      id: 'anaki-ux',
+      title: 'UX/UI Design - Añaki',
+      description: 'User experience design and interactive prototype for Añaki.',
+      category: 'ux',
+      image: 'assets/anaki.png',
+      images: [
+        'assets/anaki.png',
+        'assets/anaki2.png',
+        'assets/añaki3.png'
+      ],
+      technologies: ['Figma', 'UX/UI', 'Prototyping', 'Design Thinking'],
+      details: `User experience design and interactive prototype for Añaki, following the Design Thinking methodology:\n\n1. Empathy: Conducted interviews with users and stakeholders to understand their needs and challenges.\n2. Definition: Identified main problems and improvement opportunities.\n3. Ideation: Developed multiple solutions to enhance user experience.\n4. Prototyping: Created wireframes and an interactive prototype in Figma.\n5. Testing: Conducted usability tests with real users.\n\nMain features:\n- Complete interactive prototype\n- User-centered design\n- Optimized navigation flows\n- Intuitive interactions\n- Modern and attractive visual design`,
+      links: {
+        demo: 'https://www.figma.com/proto/JJSuL8SoM1UasR15yMOdk9/A%C3%B1aki---Dise%C3%B1o-UX-UI--Team-?node-id=2194-10385&starting-point-node-id=2194%3A10385&embed-host=share',
+        code: null
+      },
+      featured: true
+    },
     {
       id: 'biogenetics-lab',
       title: 'Website for Biogenetics Laboratory',
@@ -227,7 +263,7 @@ const projects = {
       image: 'assets/geargori.png',
       images: [
         'assets/geargori.png',
-        'assets/geargori2..png',
+        'assets/geargori2.png',
         'assets/geargori3.png'
       ],
       technologies: ['Figma', 'UX', 'UI'],
@@ -246,7 +282,6 @@ const projects = {
       images: [
         'assets/fundacionnapp.png',
         'assets/fundacionnapp2.png',
-        'assets/fundacionnapp3.png'
       ],
       technologies: ['Figma', 'HTML', 'CSS', 'JavaScript'],
       details: `Development of the institutional website for Napp Foundation, following the Design Thinking methodology and focused on responsive design:\n\n1. Empathy: Conducted interviews with the foundation team and potential users to understand their needs and challenges.\n2. Definition: Identified main problems and objectives for the website, including the need to showcase social impact and facilitate donations.\n3. Ideation: Developed multiple solutions to improve navigation and information presentation, focusing on accessibility and responsive design.\n4. Prototyping: Created wireframes and interactive prototypes in Figma, testing different layouts and user flows, with special attention to mobile experience.\n5. Testing: Conducted usability tests with real users to validate the experience across different devices.\n\nMain features:\n- Responsive design optimized for all devices\n- Prepared for future mobile app conversion\n- Projects and programs section\n- Image gallery\n- Contact form\n- Social media integration\n- News and updates blog\n- Donations section\n- Beneficiary testimonials`,
@@ -265,7 +300,6 @@ const projects = {
       images: [
         'assets/fundacionnapp.png',
         'assets/fundacionnapp2.png',
-        'assets/fundacionnapp3.png'
       ],
       technologies: ['Figma', 'HTML', 'CSS', 'JavaScript'],
       details: `Development of the institutional website for Napp Foundation, following the Design Thinking methodology:\n\n1. Research: Needs analysis and interviews with the foundation team.\n2. Definition: Setting objectives and site structure.\n3. Ideation: Design of information architecture and user experience.\n4. Prototyping: Creation of wireframes and interactive prototypes.\n5. Implementation: Frontend development with accessibility focus.\n\nMain features:\n- Responsive and accessible design\n- Projects and programs section\n- Image gallery\n- Contact form\n- Social media integration\n- News and updates blog`,
@@ -350,8 +384,7 @@ const projects = {
       image: 'assets/criminal.png',
       images: [
         'assets/criminal.png',
-        'assets/criminal1.png',
-        'assets/criminal2.png',
+        'assets/criminal2.png',  
         'assets/criminal3.png'
       ],
       technologies: ['Photoshop', 'Illustrator', 'Infographic Design'],

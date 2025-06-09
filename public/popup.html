@@ -46,37 +46,38 @@
 
   <!-- Main content section for project details -->
   <section class="py-12 px-4">
-    <div class="container mx-auto max-w-4xl glass-card flex flex-col md:flex-row gap-6 p-6 md:p-8 relative">
+    <div class="container mx-auto max-w-4xl glass-card p-6 md:p-8 relative">
       <!-- Botón de regresar -->
       <a href="proyectos.html" class="absolute top-4 left-4 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white text-3xl transition-colors" aria-label="Volver a proyectos">
         <i class="fas fa-arrow-left"></i>
       </a>
 
-      <!-- Columna imagen -->
-      <div class="modal-image-col mt-10 md:mt-0 relative"> 
-        <div id="image-carousel" class="modal-image-container relative">
-          <img id="carousel-single-image" class="w-full h-full object-contain" src="" alt="" />
-          <!-- Controles de Carrusel -->
-          <div class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4">
-            <button id="prev-image" class="p-2 rounded-full bg-gray-600/80 hover:bg-gray-700 text-white shadow transition-transform hover:scale-105" aria-label="Imagen anterior">
-              <i class="fas fa-chevron-left"></i>
-            </button>
-            <button id="next-image" class="p-2 rounded-full bg-gray-600/80 hover:bg-gray-700 text-white shadow transition-transform hover:scale-105" aria-label="Imagen siguiente">
-              <i class="fas fa-chevron-right"></i>
-            </button>
+      <!-- Contenedor flexible que se ajusta según el contenido -->
+      <div class="flex flex-col lg:flex-row gap-6 mt-10">
+        <!-- Columna imagen -->
+        <div class="modal-image-col w-full lg:w-1/2"> 
+          <div id="image-carousel" class="modal-image-container relative">
+            <img id="carousel-single-image" class="w-full h-full object-contain" src="" alt="" />
+            <!-- Controles de Carrusel -->
+            <div class="absolute top-1/2 -translate-y-1/2 w-full flex justify-between px-4">
+              <button id="prev-image" class="p-2 rounded-full bg-gray-600/80 hover:bg-gray-700 text-white shadow transition-transform hover:scale-105" aria-label="Imagen anterior">
+                <i class="fas fa-chevron-left"></i>
+              </button>
+              <button id="next-image" class="p-2 rounded-full bg-gray-600/80 hover:bg-gray-700 text-white shadow transition-transform hover:scale-105" aria-label="Imagen siguiente">
+                <i class="fas fa-chevron-right"></i>
+              </button>
+            </div>
           </div>
         </div>
-        <!-- Puntos del Carrusel (Removidos para simplificar diseño) -->
-        <!-- <div id="carousel-dots" class="flex gap-2 justify-center mt-4"></div> -->
-      </div>
-      <!-- Info -->
-      <div class="modal-info-col">
-        <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
-        <h4 class="font-semibold mt-4 mb-1">Descripción</h4>
-        <p id="modal-description" class="text-base leading-relaxed text-gray-800 dark:text-gray-200 whitespace-pre-line"></p>
-        <h4 class="font-semibold mt-4 mb-1">Tecnologías</h4>
-        <div id="modal-technologies" class="flex flex-wrap gap-2"></div>
-        <div id="modal-links" class="mt-4 space-x-2 flex justify-center"></div> <!-- Centering buttons -->
+        <!-- Info -->
+        <div class="modal-info-col w-full lg:w-1/2">
+          <h3 id="modal-title" class="text-2xl font-bold mb-2"></h3>
+          <h4 class="font-semibold mt-4 mb-1">Descripción</h4>
+          <p id="modal-description" class="text-base leading-relaxed text-gray-800 dark:text-gray-200 whitespace-pre-line"></p>
+          <h4 class="font-semibold mt-4 mb-1">Tecnologías</h4>
+          <div id="modal-technologies" class="flex flex-wrap gap-2"></div>
+          <div id="modal-links" class="mt-4 space-x-2 flex justify-center"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -131,24 +132,60 @@
           codeLink.innerHTML = '<i class="fab fa-github mr-2"></i>Ver Código';
           links.appendChild(codeLink);
         }
+        if (project.links.report) {
+          const reportLink = document.createElement('a');
+          reportLink.href = project.links.report;
+          reportLink.target = '_blank';
+          reportLink.className = 'btn-animado secondary text-xs px-4 py-2';
+          reportLink.innerHTML = '<i class="fas fa-file-pdf mr-2"></i>Ver Reporte UX';
+          links.appendChild(reportLink);
+        }
 
         // Carrusel: solo una imagen visible (Puntos no usados en UI)
         let currentImageIndex = 0;
         function updateCarousel() {
-          carouselImage.src = project.images[currentImageIndex];
-          carouselImage.alt = `${project.title} - Imagen ${currentImageIndex + 1}`;
-          // No actualizar puntos visualmente
-          // carouselDots.innerHTML = '';
-          // project.images.forEach((img, idx) => {
-          //   const dot = document.createElement('button');
-          //   dot.className = `w-2 h-2 rounded-full transition-colors ${idx === currentImageIndex ? 'bg-rosa-pastel' : 'bg-gray-300 dark:bg-gray-600'}`;
-          //   dot.setAttribute('aria-label', `Imagen ${idx + 1}`);
-          //   dot.onclick = () => {
-          //     currentImageIndex = idx;
-          //     updateCarousel();
-          //   };
-          //   carouselDots.appendChild(dot);
-          // });
+          if (project.id === 'anaki-ux') {
+            // Si es el proyecto de Añaki, mostrar el iframe de Figma
+            const carouselContainer = document.getElementById('image-carousel');
+            carouselContainer.innerHTML = `
+              <iframe 
+                style="border: 1px solid rgba(0, 0, 0, 0.1);" 
+                width="100%" 
+                height="450" 
+                src="${project.links.demo}" 
+                allowfullscreen>
+              </iframe>
+            `;
+            // Ocultar los controles del carrusel para el iframe
+            document.getElementById('prev-image').style.display = 'none';
+            document.getElementById('next-image').style.display = 'none';
+            // Forzar layout de dos columnas para el iframe
+            document.querySelector('.flex-col').classList.remove('flex-col');
+            document.querySelector('.flex-col').classList.add('flex-row');
+          } else {
+            // Para otros proyectos, mostrar las imágenes normalmente
+            carouselImage.src = project.images[currentImageIndex];
+            carouselImage.alt = `${project.title} - Imagen ${currentImageIndex + 1}`;
+            // Mostrar los controles del carrusel
+            document.getElementById('prev-image').style.display = 'block';
+            document.getElementById('next-image').style.display = 'block';
+
+            // Detectar proporciones de la imagen
+            carouselImage.onload = function() {
+              const container = document.querySelector('.flex-col');
+              const aspectRatio = this.naturalWidth / this.naturalHeight;
+              
+              // Si la imagen es muy rectangular (más ancha que alta)
+              if (aspectRatio > 1.5) {
+                container.classList.remove('lg:flex-row');
+                container.classList.add('flex-col');
+              } else {
+                // Para imágenes cuadradas o verticales, mantener dos columnas
+                container.classList.remove('flex-col');
+                container.classList.add('lg:flex-row');
+              }
+            };
+          }
         }
         document.getElementById('prev-image').onclick = () => {
           currentImageIndex = (currentImageIndex - 1 + project.images.length) % project.images.length;
