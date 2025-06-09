@@ -25,7 +25,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dark .nav-link {
-  @apply text-white/80 hover:text-white;
+  @apply text-white hover:text-white;
+  opacity: 0.8;
+}
+
+.dark .nav-link:hover {
+  opacity: 1;
 }
 
 .dark .btn-animado.primary {
@@ -62,7 +67,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link {
-  @apply text-white/80 hover:text-white transition-colors relative;
+  @apply text-white hover:text-white transition-colors relative;
+  opacity: 0.8;
+}
+
+.nav-link:hover {
+  opacity: 1;
 }
 
 .nav-link::after {
@@ -235,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .dark .language-btn {
-  @apply text-white/80 hover:text-white;
+  @apply text-white hover:text-white;
 }
 
 .dark .language-btn.active {
@@ -309,10 +319,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mejoras en el contraste */
-.dark .text-white\/80 {
-  @apply text-white/90;
+.dark .text-white-80 {
+  @apply text-white;
+  opacity: 0.9;
 }
 
-.dark .text-white\/60 {
-  @apply text-white/70;
+.dark .text-white-60 {
+  @apply text-white;
+  opacity: 0.7;
 }
